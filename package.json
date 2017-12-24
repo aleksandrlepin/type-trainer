@@ -1,0 +1,39 @@
+{
+  "name": "key-trainer",
+  "version": "1.0.0",
+  "description": "speed typing app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aleksandrlepin/type-trainer.git"
+  },
+  "keywords": [
+    "type",
+    "trainer",
+    "speed",
+    "typing"
+  ],
+  "author": "aleksandrlepin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksandrlepin/type-trainer/issues"
+  },
+  "homepage": "https://github.com/aleksandrlepin/type-trainer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^0.4.0",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-concat": "^2.6.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.5",
+    "gulp-server-livereload": "^1.5.4",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

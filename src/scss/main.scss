@@ -1,0 +1,144 @@
+html {
+  color: #333;
+  font: 500 18px sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
+}
+
+mark {
+  color: #080;
+  background: 0;
+}
+
+button {
+  background: #eee;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+  font: 500 18px/22px sans-serif;
+}
+
+select {
+  background: #eee;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+  font: 500 18px/22px sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-height: 310px;
+}
+
+.btn-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.keysQuantity {
+  width: 35px;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+  font: 500 18px/22px sans-serif;
+}
+
+.block {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f6f6f6;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow:  0 0 15px #ccc;
+}
+
+.console {
+  width: 32.5%;
+}
+
+.console p {
+  height: 80%;
+  font-family: monospace;
+  font-size: 16px;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.keyboard {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+.keyboard__btn {
+  width: 45px;
+  height: 45px;
+  margin: 2px;
+  background: #eee;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+  font: 500 18px/22px sans-serif;
+  text-align: center;
+}
+
+.keyboard__space {
+  width: 388px;
+  height: 45px;
+  margin: 2px;
+  background: #eee;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+  font: 500 18px/22px sans-serif;
+  text-align: center;
+}
+
+.keyboard__btn--active {
+  background: #fff;
+  box-shadow: inset 1px 1px 5px #bbb;
+}
+
+.string {
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.string span{
+  vertical-align: bottom;
+  transition: all .15s ease-in-out;
+}
+
+.string .active{
+  text-shadow: 0 2px 5px #555;
+  font-size: 50px;
+  font-weight: 700;
+  transition: all .15s ease-in-out;
+}
