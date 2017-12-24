@@ -21,7 +21,7 @@ let typeTrainer = {
   layouts: {},
   langs: [],
   currentLang: '',
-  keysQuantity: 10,
+  keysQuantity: 20,
   currentKey: false,
   counter: 0,
   errors: 0,

@@ -1,3 +1,11 @@
+@mixin gray-block() {
+  background: #eee;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #bbb;
+  color: #333;
+}
+
 html {
   color: #333;
   font: 500 18px sans-serif;
@@ -19,21 +27,9 @@ mark {
   background: 0;
 }
 
-button {
-  background: #eee;
-  border: solid 2px #bbb;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #bbb;
-  color: #333;
-  font: 500 18px/22px sans-serif;
-}
-
+button,
 select {
-  background: #eee;
-  border: solid 2px #bbb;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #bbb;
-  color: #333;
+  @include gray-block();
   font: 500 18px/22px sans-serif;
 }
 
@@ -76,52 +72,45 @@ select {
 
 .console {
   width: 32.5%;
+
+  p {
+    height: 80%;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: left;
+    overflow-y: scroll;
+  }
 }
 
-.console p {
-  height: 80%;
-  font-family: monospace;
-  font-size: 16px;
-  text-align: left;
-  overflow-y: scroll;
-}
 
 .keyboard {
   display: flex;
   flex-flow: wrap column;
   align-items: center;
   margin: 0 auto 10px;
-}
 
-.keyboard__btn {
-  width: 45px;
-  height: 45px;
-  margin: 2px;
-  background: #eee;
-  border: solid 2px #bbb;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #bbb;
-  color: #333;
-  font: 500 18px/22px sans-serif;
-  text-align: center;
-}
+  &__btn {
+    @include gray-block();
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    font: 500 18px/22px sans-serif;
+    text-align: center;
 
-.keyboard__space {
-  width: 388px;
-  height: 45px;
-  margin: 2px;
-  background: #eee;
-  border: solid 2px #bbb;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #bbb;
-  color: #333;
-  font: 500 18px/22px sans-serif;
-  text-align: center;
-}
+    &--active {
+      background: #fff;
+      box-shadow: inset 1px 1px 5px #bbb;
+    }
+  }
 
-.keyboard__btn--active {
-  background: #fff;
-  box-shadow: inset 1px 1px 5px #bbb;
+  &__space {
+    @include gray-block();
+    width: 388px;
+    height: 45px;
+    margin: 2px;
+    font: 500 18px/22px sans-serif;
+    text-align: center;
+  }
 }
 
 .string {
@@ -129,16 +118,16 @@ select {
   font-size: 20px;
   line-height: 50px;
   vertical-align: middle;
-}
 
-.string span{
-  vertical-align: bottom;
-  transition: all .15s ease-in-out;
-}
+  span {
+    vertical-align: bottom;
+    transition: all .15s ease-in-out;
+  }
 
-.string .active{
-  text-shadow: 0 2px 5px #555;
-  font-size: 50px;
-  font-weight: 700;
-  transition: all .15s ease-in-out;
+  .active {
+    text-shadow: 0 2px 5px #555;
+    font-size: 50px;
+    font-weight: 700;
+    transition: all .15s ease-in-out;
+  }
 }
