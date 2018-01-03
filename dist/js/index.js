@@ -12,9 +12,9 @@ const selectAll = (node) => {
 }
 
 const lang = {
-en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./",
-ru: "йцукенгшщзхъфывапролджэячсмитьбю.",
-ua: "йцукенгшщзхїфівапролджєячсмитьбю.",
+  en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./",
+  ru: "йцукенгшщзхъфывапролджэячсмитьбю.",
+  ua: "йцукенгшщзхїфівапролджєячсмитьбю.",
 }
 
 let typeTrainer = {
@@ -78,13 +78,13 @@ let typeTrainer = {
       }
     }
 
-    keyContainer.innerHTML = '<h2> Vanilla JS keayboard. </h2>';
+    keyContainer.innerHTML = '<h2> Vanilla JS keayboard </h2>';
     keyContainer.appendChild(topRow);
     keyContainer.appendChild(midRow);
     keyContainer.appendChild(botRow);
     keyContainer.appendChild(spaceRow);
 
-    keyContainer.insertAdjacentHTML('beforeEnd', '<label> Mute sound. </label>');
+    keyContainer.insertAdjacentHTML('beforeEnd', '<label> Mute sound </label>');
     keyContainer.querySelector('label').prepend(radio);
     root.replaceChild(keyContainer, root.firstElementChild);
   },
@@ -133,7 +133,11 @@ let typeTrainer = {
     this.writeConsole('Start training');
   },
 
-  stopTrainer: function () {
+  stopTrainer: function (e) {
+    if(e.type === 'click') {
+      this.stopTimer();
+      return
+    }
     const msg = (this.errors === 1) ? `You made ${this.errors} mistake.` : `You made ${this.errors} mistakes.`;
     const kps = this.countKPS();
 
@@ -270,10 +274,10 @@ let typeTrainer = {
 
   setKeysQuantity: function () {
     let num = +select('#keysQuantity').value;
-    if (typeof num === 'number' && num > 0 && num < 61 ) {
+    if (typeof num === 'number' && num > 19 && num < 61 ) {
       this.keysQuantity = num;
     } else {
-      alert('You can insert only numbers between 1 and 60 inclusive.');
+      alert('You can insert only numbers between 20 and 60 inclusive.');
     }
     return;
   },
