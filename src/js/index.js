@@ -134,7 +134,9 @@ let typeTrainer = {
   },
 
   stopTrainer: function (e) {
-    if(e.type === 'click') {
+    console.log('e: ', e);
+    if(e && e.type === 'click') {
+      console.log('click: ');
       this.stopTimer();
       return
     }
