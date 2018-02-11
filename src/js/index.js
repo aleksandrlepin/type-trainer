@@ -134,9 +134,7 @@ let typeTrainer = {
   },
 
   stopTrainer: function (e) {
-    console.log('e: ', e);
     if(e && e.type === 'click') {
-      console.log('click: ');
       this.stopTimer();
       return
     }
@@ -152,9 +150,10 @@ let typeTrainer = {
     select('#kps').textContent = kps;
     if (localStorage.getItem('kps') === null) {
       localStorage.setItem('kps', kps);
+      this.render('#bestKps', kps);
     } else if (+localStorage.getItem('kps') < kps) {
       localStorage.setItem('kps', kps);
-      select('#bestKps').textContent = kps;
+      this.render('#bestKps', kps);
     }
 
   },
@@ -388,7 +387,6 @@ typeTrainer.langs.forEach(element => {
 
 select('#keysQuantity').value = typeTrainer.keysQuantity;
 
-console.log('typeTrainer = ', typeTrainer);
 // let testFn = function () {
 //   if (typeTrainer.currentLang === '') {
 //     console.log('testFn: No language to test. Please choose a language.');
